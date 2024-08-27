@@ -1,0 +1,14 @@
+<div class="gradient_bg min-h-screen relative">
+    <app-header></app-header>
+    <div class="absolute z-30 border-[1px] border-firstLine w-full"></div>
+    <div *ngIf="showLines" class="z-30 absolute border-[1px] top-0 left-[7em] border-firstLine h-full"></div>
+    <div *ngIf="showLines" class="z-30 absolute border-[1px] top-0 right-[7em] border-firstLine h-full"></div>
+    <router-outlet></router-outlet>
+    <div class="absolute border-[1px] border-firstLine w-full"></div>
+   <app-footer></app-footer>
+  </div>
+  <div class="fixed right-6 bottom-[3em] border-[1px] border-firstLine p-4">
+    <a href="#"><img  src="./assets/images/toTop.png" alt="Scroll To Top"></a>
+  </div>
+
+  

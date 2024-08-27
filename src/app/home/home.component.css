@@ -1,0 +1,47 @@
+select{
+    appearance: none !important;
+}
+select,
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type='email'] {
+    appearance: none !important;
+    outline: none;
+    padding: 0.5rem;
+    color: #F4F4F4
+}
+
+option{
+    background-color: #0b1307 !important;
+    appearance: none !important;
+    outline: none !important;
+    color: #F4F4F4
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0; 
+    position: absolute; 
+    cursor: pointer; 
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+.slide-down{
+    transform: translateY(300px)
+}
+
+.slide-up{
+    transform: translateY(-300px);
+}
+
+.transition-transform{
+    transition: transform 0.5 ease
+}

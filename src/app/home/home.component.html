@@ -1,0 +1,160 @@
+<div class="flex flex-col items-center gap-[5em]">
+
+        <section>
+            <div class="flex flex-col gap-[5em] min-h-[calc(100vh-150px)] items-center justify-center">
+              <div class="flex flex-col gap-3 text-center ">
+                <p class="text-secondary font-light text-[1.5rem]">Welcome to</p>
+                <p class="text-primary font-light text-[3.75rem]">The William</p>
+              </div>
+              <div class="absolute left-0">
+                <img src="./assets/images/header_leaf.svg" alt="The william header image" class="mix-blend-lighten" />
+              </div>
+            </div>
+        </section>
+
+<!-- today's special menu -->
+        <section>
+            <div class="flex items-center justify-center h-[50rem] border-l-[1px] border-b-[1px] border-insideLine w-[60vw]">
+                <div class="flex flex-row justify-center items-center gap-6 w-[40vw]">
+                  <div class="w-[100%]">
+                    <img  src="./assets/images/home01.png" alt="Daily Creations" />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <div class="flex flex-col">
+                      <p class="text-secondary text-[1.2rem] font-light ">Daily creations</p>
+                      <p class="text-primary text-[2rem] font-regular leading-9">Today's Special Menu</p>
+                      <p class="text-primary text-[1.1rem] font-thin leading-6">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
+                    </div>
+                    <div>
+                      <button class="border border-1 border-button h-[40px] px-4 text-center text-secondary">Show More</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </section>
+
+<!-- big image -->
+    <section>
+    <img src="./assets/images/home02.png" alt="The william"/>
+    </section>
+
+<!-- history -->
+    <section>
+            <div class="relative flex flex-col h-[50rem] w-[60vw] items-center justify-center p-[5em]">
+             <div class="absolute top-0 right-0 w-[18rem] border-t-[1px] border-insideLine"></div>
+             <div class="absolute top-0 right-0 h-[3rem] border-r-[1px] border-insideLine"></div>
+             <div class="absolute bottom-0 left-0 w-[18rem] border-b-[1px] border-insideLine"></div>
+             <div class="absolute bottom-0 left-0 h-[3rem] border-l-[1px] border-insideLine"></div>
+
+             <div class="flex flex-col gap-2">
+                <div class="flex flex-col">
+                  <p class="text-secondary text-[1.2rem] font-light">History</p>
+                  <p class="text-primary text-[2rem] font-regular leading-9">About The William</p>
+                  <div class="flex flex-row gap-5">
+                      <p class="text-primary text-[1.1rem] font-thin leading-6">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>
+                      <p class="text-primary text-[1.1rem] font-thin leading-6">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin</p>
+                  </div>
+                </div>
+                <div>
+                  <button class="border border-1 border-button h-[40px] px-4 text-center text-secondary">Show More</button>
+                </div>
+              </div>
+              <p class="absolute bottom-1 left-3 text-[1.1rem] text-forItalic italic font-light">“I No Longer Steal From Nature“</p>
+            </div>
+    </section>
+
+<!-- Our chef -->
+<section>
+<div class="relative w-[60vw] h-[50rem] flex justify-center p-[5em]">
+    <div class="absolute border-r-[1px] right-0 border-insideLine h-[16rem]"></div>
+    <div class="flex flex-row justify-center items-center gap-6 w-[40vw]">
+        <div class="w-[100%]">
+            <img src="./assets/images/home03.png"  alt="Our chef"/>
+        </div>
+        <div class="flex flex-col gap-2">
+            <div class="flex flex-col">
+              <p class="text-secondary text-[1.2rem] font-light ">Our Chef</p>
+              <p class="text-primary text-[2rem] font-regular leading-9">William Colin</p>
+              <p class="text-primary text-[1.1rem] font-thin leading-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </div>
+            <div>
+              <button class="border border-1 border-button h-[40px] px-4 text-center text-secondary">Show More</button>
+            </div>
+          </div>
+    </div>
+    <p class="absolute bottom-0 right-0 text-[1.1rem] text-forItalic italic font-light">Embark on a journey to discover culinary delights that tantalize your senses.</p>
+</div>
+    </section>
+
+    <!-- explore -->
+    <section class="relative w-full h-[50rem] items-center justify-center">
+      <div class="flex items-center h-full gap-5 w-[60vw] pl-[20vw] relative">
+        <div class="absolute top-0 left-[20vw] h-[10rem] border-l-[1px] border-insideLine"></div>
+        <div class="absolute bottom-0 left-[20vw] h-[10rem] border-l-[1px] border-insideLine"></div>
+    
+        <div class="flex flex-col gap-2 w-[20vw]">
+          <div class="flex flex-col">
+            <p class="text-secondary text-[1.2rem] font-light">Our Menu</p>
+            <p class="text-primary text-[2rem] font-regular leading-9">Explore Our <br> Culinary Offerings</p>
+            <p class="text-primary text-[1.1rem] font-thin leading-6">It is a long established fact that a reader will be distracted by the readable content.</p>
+          </div>
+          <div>
+            <button class="border border-1 border-button h-[40px] px-4 text-center text-secondary">Show More</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="absolute right-0 top-[25%]">
+        <img src="./assets/images/home04.png" class="" />
+      </div>
+    </section>
+    
+    <!-- reservation -->
+<section>
+  <div 
+  *ngIf="successfullySent"
+  [ngClass]="{'slide-down' : successfullySent, 'slide-up' : !successfullySent}"
+  class="transition-transform fixed top-[-300px] flex items-center justify-center">
+  <div class="flex items-center justify-center text-center border border-insideLine w-64 h-[40px]">
+    <p class="text-secondary font-regular">Successfully sent!</p>
+  </div>
+</div>
+
+<div class="w-[60vw] h-[50rem] flex flex-row justify-center items-end gap-10 border-b-[1px] border-bookLine">
+ <div class="flex flex-col gap-[6em]">
+   <form [formGroup] = "bookingForm" (ngSubmit)="onSubmit()" >
+     <div class="flex flex-col gap-5">
+      <div>
+        <p class="text-secondary text-[1.2rem] font-light">Reservation</p>
+        <p class="text-primary text-[2rem] font-regular leading-9">Book a table</p>
+      </div>
+       <select id="person" formControlName="person" aria-placeholder="1 Person" class="pb-[10px] text-bookText text-[1rem] font-light border-b-[1px] border-bookLine w-[20rem] bg-transparent">
+         <option value="" disabled >Select Person</option>
+         <option value="1">1 Person</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+         <option value="5">5</option>
+         <option value="6">6</option>
+       </select>
+       <input type="date" id="date" formControlName="date" class="pb-[10px] text-bookText text-[1rem] font-light border-b-[1px] border-bookLine w-[20rem] bg-transparent">
+       <input type="time" id="time" formControlName="time" class="pb-[10px] text-bookText text-[1rem] font-light border-b-[1px] border-bookLine w-[20rem] bg-transparent">
+       <input type="text" id="name" formControlName="name" placeholder="Name" class="pb-[10px] text-bookText text-[1rem]  border-b-[1px] border-bookLine w-[20rem] bg-transparent">
+       <input type="number" 
+       id="contact" 
+       formControlName="contact" 
+       placeholder="Contact" 
+       class="pb-[10px] text-bookText text-[1rem] border-b-[1px] border-bookLine w-[20rem] bg-transparent"
+      >
+     </div>
+     <button type="submit" class="mt-5 border border-[1px] border-bookLine h-[40px] px-4 text-center text-secondary">BOOK</button>
+   </form>
+   <p class=" text-[1rem] text-forItalic italic font-light pb-5">Reserve your table and unlock an unforgettable culinary mystery.</p>
+ </div>
+  <img src="./assets/images/homeBook.png" alt="Booking reservation" class="mix-blend-color-dodge"/>
+</div>
+    
+</section>
+
+  </div>
+  
