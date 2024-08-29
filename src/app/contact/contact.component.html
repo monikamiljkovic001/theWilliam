@@ -1,16 +1,15 @@
-
 <div class="flex flex-row justify-between items-center mt-20">
     <div class="text-center w-[30vw] pl-[7em]">
         <p class="text-[1.1rem] text-secondary font-thin">The William</p>
         <p class="text-[2rem] text-primary font-thin">Contact Us</p>
     </div>
     <div class="w-[70vw]">
-        <img src="./assets/images/aboutHeader.png" class="w-full"/>
+        <!-- Map container div updated to match ViewChild reference -->
+        <div #mapContainer id="map" style="height: 400px; width: 100%;"></div>
     </div>
-  </div>
+</div>
 
   <div class="flex flex-row justify-between">
-
       <!-- Vertical line -->
     <div class="flex flex-col relative">
         <div style="left: calc(30vw / 2 + 3.5em);" class="absolute border-l-[1px] border-firstLine h-full"></div>

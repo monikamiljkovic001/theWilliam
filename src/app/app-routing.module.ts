@@ -13,6 +13,7 @@ import { LunchComponent } from './ourMenuPages/lunch/lunch.component';
 import { DinnerComponent } from './ourMenuPages/dinner/dinner.component';
 import { SweetsComponent } from './ourMenuPages/sweets/sweets.component';
 
+
 const routes: Routes = [
 {path:'', component: HomeComponent},
 {path:'about', component: AboutUsComponent},

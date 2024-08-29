@@ -22,6 +22,7 @@ import { LunchComponent } from './ourMenuPages/lunch/lunch.component';
 import { DinnerComponent } from './ourMenuPages/dinner/dinner.component';
 import { SweetsComponent } from './ourMenuPages/sweets/sweets.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { SweetsComponent } from './ourMenuPages/sweets/sweets.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
 
   ],
   providers: [],
