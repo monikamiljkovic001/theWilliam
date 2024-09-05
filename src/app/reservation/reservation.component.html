@@ -1,1 +1,49 @@
-<p>reservation works!</p>
+<div class="flex flex-row justify-between items-center pt-40">
+    <div class="text-center w-[30vw] pl-[7em]">
+        <p class="text-[1.1rem] text-secondary font-thin">The William</p>
+        <p class="text-[2rem] text-primary font-thin">Reservation</p>
+    </div>
+    <div class="w-[70vw]">
+        <img src="./assets/images/reservation.png" class="w-full mix-blend-color-dodge"/>
+    </div>
+  </div>
+
+  
+ <div class="flex flex-row justify-between">
+
+      <!-- Vertical line -->
+    <div class="flex flex-col relative">
+        <div style="left: calc(30vw / 2 + 3.5em);" class="absolute border-l-[1px] border-firstLine h-full"></div>
+    </div>
+
+    <div class="w-[70vw] pt-[5em] flex flex-row  items-end gap-10 border-b-[1px] border-bookLine">
+        <div class="flex flex-col gap-[6em]">
+          <form [formGroup] = "reservationForm" (ngSubmit)="onSubmit()" >
+            <div class="flex flex-col gap-5">
+               <p class="text-primary text-[2rem] font-regular leading-9">Book a table</p>
+              <select id="person" formControlName="person" aria-placeholder="1 Person" class="pb-[10px] text-bookText text-[1rem] font-light border-b-[1px] border-bookLine w-[20rem] bg-transparent">
+                <option value="" disabled >Select Person</option>
+                <option value="1">1 Person</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <input type="date" id="date" formControlName="date" class="custom-input">
+              <input type="time" id="time" formControlName="time" class="custom-input">
+              <input type="text" id="name" formControlName="name" placeholder="Name" class="custom-input">
+              <input type="number" 
+              id="contact" 
+              formControlName="contact" 
+              placeholder="Contact" 
+              class="custom-input"
+             >
+            </div>
+            <button type="submit" class="mt-5 border border-[1px] border-bookLine h-[40px] px-4 text-center text-secondary">BOOK</button>
+          </form>
+          <p class=" text-[1rem] text-forItalic italic font-light pb-5">Reserve your table and unlock an unforgettable culinary mystery.</p>
+        </div>
+       </div>
+
+</div>

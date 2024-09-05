@@ -1,20 +1,25 @@
-<div class="flex flex-row justify-between items-center mt-20">
-    <div class="text-center w-[30vw] pl-[7em]">
+<div class="flex flex-col md:flex-row justify-between items-center gap-5 pt-40">
+
+    <div class="text-center md:w-[30vw] md:pl-[7em]">
         <p class="text-[1.1rem] text-secondary font-thin">The William</p>
         <p class="text-[2rem] text-primary font-thin">Our Gallery</p>
     </div>
-    <div class="w-[70vw]">
+
+    <div class="md:w-[70vw]">
         <img src="./assets/images/ourGalleryHeader.png" class="w-full"/>
     </div>
+
   </div>
 
-  <div class="flex flex-row justify-between">
+  <div class="flex flex-row justify-center md:justify-between">
+
       <!-- Vertical line -->
     <div class="flex flex-col relative">
-        <div style="left: calc(30vw / 2 + 3.5em);" class="absolute border-l-[1px] border-firstLine h-full"></div>
+        <div style="left: calc(30vw / 2 + 3.5em);" class="hidden md:block md:absolute border-l-[1px] border-firstLine h-full"></div>
     </div>
 
     <div class="w-[70vw] mt-[5em]">
+
         <div class="flex flex-col w-[50vw] gap-[3em]">
             <div class="flex flex-col">
                 <p class="text-justify text-primary leading-6 text-[1rem] font-thin">Take a visual tour of The William through our gallery. From the elegant dining room to the cozy outdoor patio, every corner of our restaurant is designed to provide a memorable dining experience. Our behind-the-scenes photos offer a glimpse into the artistry and precision that go into every dish we serve.</p>
@@ -56,6 +61,7 @@
            
             <p class="pb-[5em] text-justify text-primary leading-6 text-[1rem] font-light">Go to our <a class="text-secondary text-[1rem]" routerLink="MENU">MENU</a> and discover the delicious dishes that await you. From savory appetizers to delectable desserts, there's something for everyone to enjoy. Don't miss out on our chef's specials – your taste buds will thank you!</p>
         </div>
+
     </div>
 
   </div>

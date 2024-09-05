@@ -1,13 +1,13 @@
-<div class="flex flex-row justify-between items-center mt-20">
-    <div class="text-center w-[30vw] pl-[7em]">
-        <p class="text-[1.1rem] text-secondary font-thin">The William</p>
-        <p class="text-[2rem] text-primary font-thin">Contact Us</p>
-    </div>
-    <div class="w-[70vw]">
-        <!-- Map container div updated to match ViewChild reference -->
-        <div #mapContainer id="map" style="height: 400px; width: 100%;"></div>
-    </div>
+<div class="flex flex-row justify-between items-center pt-40">
+  <div class="text-center w-[30vw] pl-[7em]">
+    <p class="text-[1.1rem] text-secondary font-thin">Informations</p>
+    <p class="text-[2rem] text-primary font-thin">Contact Us</p>
+  </div>
+  <div class="w-[70vw] border-0">
+    <app-map></app-map>
+  </div>
 </div>
+
 
   <div class="flex flex-row justify-between">
       <!-- Vertical line -->
@@ -15,6 +15,47 @@
         <div style="left: calc(30vw / 2 + 3.5em);" class="absolute border-l-[1px] border-firstLine h-full"></div>
     </div>
 
+    <div class="relative w-[70vw] flex flex-col gap-[3em] py-20">
 
+      <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+        <div class="w-full md:w-[50vw] flex flex-wrap justify-between gap-5">
+          <div class="flex flex-col gap-5 w-full md:w-[45%] w-[100%]">
+            <input
+              type="text"
+              formControlName="name"
+              placeholder="Name"
+              class="custom-input w-full md:w-auto"
+            />
+            <input
+              type="email"
+              formControlName="email"
+              placeholder="Email"
+              class="custom-input w-full md:w-auto"
+            />
+          </div>
+          <div class="flex flex-col gap-5 w-full md:w-[45%] w-[100%]">
+            <input
+              type="number"
+              formControlName="phone"
+              placeholder="Phone"
+              class="custom-input w-full md:w-auto"
+            />
+            <textarea
+              formControlName="message"
+              placeholder="Message"
+              class="custom-input w-full md:w-auto"
+            ></textarea>
+            <button
+              type="submit"
+              class="mt-5 border border-[1px] border-bookLine h-[40px] text-center text-secondary px-4 w-[100px]">
+              BOOK
+            </button>
+          </div>
+        </div>
+      </form>
+      
+      <div class="w-[70vw] absolute bottom-0 right-0 text-[1.1rem] text-forItalic italic font-light"><p>"We're here to help! Reach out to us anytime.</p></div>
+  </div>
     
   </div>
+

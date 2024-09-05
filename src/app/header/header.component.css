@@ -1,27 +1,23 @@
-.btnSidenav{
+.btnSidenav {
     cursor: pointer;
-}
-
-.sidenav{
+  }
+  
+  .sidenav {
     transition: transform 0.5s ease-in-out;
-}
-
-.transform-x-full{
-    transform: translateX(100%);
-}
-
-.translate-0{
-    transform: translateX(0);
-}
-
-
-.no-scroll {
+    transform: translateX(100%); 
+  }
+  
+  .translate-x-full {
+    transform: translateX(100%); 
+  }
+  
+  .translate-0 {
+    transform: translateX(0); 
+  }
+  
+  .no-scroll {
     overflow: hidden;
     position: fixed; 
     width: 100%;
-}
-
-.fixedBackround{
-    overflow: hidden;
-
-}
+  }
+  

@@ -4,6 +4,7 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
+  
     extend: {
       backgroundColor: {
         'primaryGradient': 'linear-gradient(90deg, #0B1307 100%, #030A01 100%)',
@@ -15,16 +16,25 @@ module.exports = {
         'forItalic': '#b6884a',
         'bookText' : '#F4F4F4',
         'sidenav' : '#0B1307',
-  
-
-       
       },
+
       borderColor: {
         'button': '#f7d9bc', 
         'firstLine': '#e5ac5f',
         'secondLine': '#896635',
         'insideLine': '#372711',
         'bookLine' :'#252B25',
+      },
+      
+      fontSize: {
+        sm: ['14px', '20px'],
+        base: ['16px', '24px'],
+        lg: ['20px', '28px'],
+        xl: ['24px', '32px'],
+        '2xl': ['2rem', {
+        lineHeight: '2rem',
+        fontWeight: '400',
+      }],
       },
     },
   },

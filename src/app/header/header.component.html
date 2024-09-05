@@ -1,29 +1,36 @@
-
 <nav>
-    <div class="flex flex-row justify-between py-3.5 px-3.5 items-center">
-        <span class="w-[5em]"></span>
-        <a routerLink=""><img class="text-center" src="./assets/images/logo.png" /></a>
-        <div class="w-[5em] btnSidenav flex flex-col justify-center items-center gap-[4px]" (click)="toggleSidenav()">
-            <div class="border border-1 rounded border-firstLine w-10"></div>
-            <div class="border border-1 rounded border-firstLine w-10"></div>
-            <div class="border border-1 rounded border-firstLine w-10"></div>
+  <div class="background_opacity fixed w-full px-5 py-4 border-b-[1px] z-30 border-firstLine">
+      <div class="flex flex-row justify-between items-center">
+        <span class="hidden md:block w-10"></span>
+        <a routerLink=""><img class="text-center" src="./assets/images/logo.png"/></a>
+        <div class="w-10 flex flex-col btnSidenav justify-center items-center gap-[4px]" (click)="toggleSidenav($event)">
+          <div class="border border-1 rounded border-firstLine w-10"></div>
+          <div class="border border-1 rounded border-firstLine w-5"></div>
+          <div class="border border-1 rounded border-firstLine w-10"></div>
         </div>
-    </div>
+      </div>
+  </div> 
 </nav>
 
+<!-- Sidenav container -->
 <div [ngClass]="{'translate-x-full' : !isSideNavOpen, 'translate-0' : isSideNavOpen}"
-class="sidenav fixed right-0 bg-[#0B1307] min-h-screen w-[30rem] flex flex-col justify-center z-20">
-    <div class="flex flex-col justify-center gap-10 pr-[10em]">
-        <div class="flex flex-row justify-end ">
-            <img src="./assets/images/sidenavLogo.png" />
-        </div>
-        <div class="flex flex-col items-end text-secondary text-[18px] font-thin justify-end gap-3" (click)="onLinkClick($event)">
-       <a *ngFor="let link of sidenavLinks" [routerLink]="link.path">{{link.label}}</a>
-        </div>
-        <div class="h-[7.5rem] border-r-[1px] border-bookLine"></div>
-        <div class="flex flex-row justify-end items-end gap-[3em]">
-            <a href="" class="text-[14px] text-secondary font-thin">instagram</a>
-            <a href="" class="text-[14px] text-secondary font-thin">facebook</a>
-        </div>
-    </div>
+class="sidenav fixed right-0 bg-[#0B1307] min-h-screen w-full md:w-[30rem] flex flex-col justify-end z-20">
+
+<div class="flex flex-col justify-between h-full gap-8 pr-[3em] md:pr-[10em]">
+  <div class="flex flex-row justify-end pt-10">
+    <a routerLink="#"><img src="./assets/images/sidenavLogo.png" /></a>
+  </div>
+
+  <div class="flex-grow flex flex-col items-end text-secondary text-[18px] font-thin justify-center gap-3" (click)="onLinkClick($event)">
+    <a *ngFor="let link of sidenavLinks" [routerLink]="link.path">{{ link.label }}</a>
+  </div>
+
+  <div class="h-[7.5rem] border-r-[1px] border-bookLine"></div>
+
+  <div class="flex flex-row justify-end items-end gap-[3em] pb-10">
+    <a href="" class="text-[14px] text-secondary font-thin">instagram</a>
+    <a href="" class="text-[14px] text-secondary font-thin">facebook</a>
+  </div>
+</div>
+
 </div>

@@ -1,25 +1,34 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-
-declare const google: any;
+import { Component, OnInit} from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements AfterViewInit {
-  @ViewChild('mapContainer', { static: false }) mapContainer!: ElementRef;
-  map!: google.maps.Map;
+export class ContactComponent implements OnInit {
 
-  ngAfterViewInit(): void {
-    // const mapOptions: google.maps.MapOptions = {
-    //   center: new google.maps.LatLng(40.73061, -73.935242),
-    //   zoom: 12,
-    // };
+  emailForm!: FormGroup;
 
-    // this.map = new google.maps.Map(
-    //   this.mapContainer.nativeElement,
-    //   mapOptions
-    // );
+  constructor(private fb:FormBuilder){}
+
+  ngOnInit(): void {
+    this.emailForm = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(4)]],
+      email:['',[Validators.required, Validators.email]],
+      phone:['',Validators.required],
+      message:['',Validators.required, ]
+    })
+
+    
   }
+
+onSubmit():void{
+  if(this.emailForm.valid){
+    console.log(this.emailForm.valid)
+    this.emailForm.reset();
+  }
+}
+
 }

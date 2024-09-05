@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Host, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -16,18 +16,30 @@ export class HeaderComponent {
     { path: 'contact', label: 'Contact' }
   ];
 
-  toggleSidenav() {
+  toggleSidenav(event: Event) {
     this.isSideNavOpen = !this.isSideNavOpen;
+    event.stopPropagation();
+
     if (this.isSideNavOpen) {
       document.body.classList.add('no-scroll');
     } else {
       document.body.classList.remove('no-scroll');
     }
+
   } 
 
-  onLinkClick(event: Event) {
-    if ((event.target as HTMLElement).tagName === 'A') {
-      this.toggleSidenav(); 
-    }
+@HostListener('document:click', ['$event'])
+onDocumentClick(event: MouseEvent): void{
+  const target = event.target as HTMLElement;
+  const sidenav = document.querySelector('.sidenav');
+
+  if(sidenav && !sidenav.contains(target) && this.isSideNavOpen){
+    this.isSideNavOpen = false;
+  }
+  
+}
+
+  onLinkClick(event: Event) {  
+      this.isSideNavOpen = false;
   }
 }

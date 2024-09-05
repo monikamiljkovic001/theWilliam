@@ -7,18 +7,19 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
   bookingForm!: FormGroup;
- successfullySent = false;
-  constructor(private fb: FormBuilder) {}
+  successfullySent = false;
+
+  constructor(private bf: FormBuilder) {}
 
   ngOnInit(): void {
-    this.bookingForm = this.fb.group({
+    this.bookingForm = this.bf.group({
       person: ['', Validators.required],
       date: ['', Validators.required],
       time: ['', Validators.required],
       name: ['', Validators.required],
       contact: ['', [Validators.required, Validators.pattern('^[0-9]*$')]]
-
     });
   }
 
@@ -34,8 +35,6 @@ export class HomeComponent implements OnInit {
         person: this.bookingForm.get('person')?.value 
       }); 
 
-    } else {
-      
     }
   }
 }
