@@ -1,0 +1,48 @@
+.fixed {
+    position: fixed;
+  }
+
+  .bg-black {
+    background-color: rgba(0, 0, 0, 0.411);
+  }
+
+  .bg-green {
+    background-color: #0b1307fb;
+  }
+  
+  .p-6 {
+    padding: 1.5rem;
+  }
+
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .top-2 {
+    top: 0.5rem;
+  }
+
+  .right-2 {
+    right: 0.5rem;
+  }
+
+  .text-gray-600 {
+    color: #4a5568;
+  }
+
+  .hover\:text-gray-900:hover {
+    color: #1a202c;
+  }
+  

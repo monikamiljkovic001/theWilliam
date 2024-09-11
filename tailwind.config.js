@@ -16,6 +16,8 @@ module.exports = {
         'forItalic': '#b6884a',
         'bookText' : '#F4F4F4',
         'sidenav' : '#0B1307',
+        'redPastel' : '#af4645',
+        'messageSuccess' : '#a0ae81',
       },
 
       borderColor: {

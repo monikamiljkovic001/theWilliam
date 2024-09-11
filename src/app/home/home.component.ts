@@ -1,40 +1,48 @@
-import { Component,OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
+
+isModalVisible: boolean = false;
+isSubmitted: boolean = false;
+
+closeModal() {
+this.isModalVisible = false;
+}
+
+openModal() {
+this.isModalVisible = true
+}
 
   bookingForm!: FormGroup;
   successfullySent = false;
 
-  constructor(private bf: FormBuilder) {}
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.bookingForm = this.bf.group({
-      person: ['', Validators.required],
-      date: ['', Validators.required],
-      time: ['', Validators.required],
-      name: ['', Validators.required],
+    this.bookingForm = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(4)]],
       contact: ['', [Validators.required, Validators.pattern('^[0-9]*$')]]
     });
   }
 
   onSubmit(): void {
     if (this.bookingForm.valid) {
-      this.successfullySent = true;
-  
+      this.isSubmitted = true;
+      console.log(this.bookingForm.value);
       setTimeout(() => {
-        this.successfullySent = false;
-      }, 4000); 
-  
-      this.bookingForm.reset({
-        person: this.bookingForm.get('person')?.value 
-      }); 
-
+        this.isSubmitted = false;
+      }, 4000);
+      this.bookingForm.reset();
+    } else {
+      this.bookingForm.markAllAsTouched(); 
+      this.isSubmitted = false;
     }
   }
 }

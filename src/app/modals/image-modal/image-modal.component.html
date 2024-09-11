@@ -1,0 +1,13 @@
+<div class="modal_overlay" (click)="close()">
+
+    <div (click)="$event.stopPropagation()">
+      <div class="w-screen flex flex-row px-[1.8vw] items-center justify-between">
+        <img src="./assets/images/leftArrow.png" class="z-30 modal arrow_left cursor-pointer" (click)="previousImage(); $event.stopPropagation()" alt="left arrow">
+        <img src="./assets/images/rightArrow.png" class="z-30 cursor-pointer" (click)="nextImage(); $event.stopPropagation()" alt="right arrow">
+      </div>
+    </div>
+
+      <img [src]="currentImage" alt="Gallery Image" class="modal_image absolute">
+
+</div>
+  

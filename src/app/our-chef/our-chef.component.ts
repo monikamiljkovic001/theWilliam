@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class OurChefComponent {
 
+
+modalVisible: boolean = false;
+
+openModal() {
+  this.modalVisible = true;
+  }
+
+handleCloseModal() {
+  this.modalVisible = false;
+  }
+
+
 }

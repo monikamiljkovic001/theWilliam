@@ -2,35 +2,43 @@
   <div class="background_opacity fixed w-full px-5 py-4 border-b-[1px] z-30 border-firstLine">
       <div class="flex flex-row justify-between items-center">
         <span class="hidden md:block w-10"></span>
-        <a routerLink=""><img class="text-center" src="./assets/images/logo.png"/></a>
-        <div class="w-10 flex flex-col btnSidenav justify-center items-center gap-[4px]" (click)="toggleSidenav($event)">
-          <div class="border border-1 rounded border-firstLine w-10"></div>
-          <div class="border border-1 rounded border-firstLine w-5"></div>
-          <div class="border border-1 rounded border-firstLine w-10"></div>
+        <a routerLink="">
+          <img class="w-[80%] md:w-[100%]" src="./assets/images/logo.png"/>
+        </a>
+        <div class="w-10 flex flex-col btnSidenav justify-center items-center gap-[4px] cursor-pointer" (click)="toggleSidenav($event)">
+        <div [ngClass]="{'open': isSideNavOpen, 'border-firstLine': true}" class="bar1 border border-1 rounded w-10"></div>
+        <div [ngClass]="{'open': isSideNavOpen, 'border-firstLine': true}" class="bar2 border border-1 rounded w-5"></div>
+        <div [ngClass]="{'open': isSideNavOpen, 'border-firstLine': true}" class="bar3 border border-1 rounded w-10"></div>
         </div>
       </div>
   </div> 
 </nav>
 
-<!-- Sidenav container -->
+<div [ngClass]="{'opacity-70 pointer-events-auto': isSideNavOpen, 'opacity-0 pointer-events-none': !isSideNavOpen}"
+     class="fixed inset-0 bg-black transition-opacity duration-300 z-10"></div>
+
+     <!-- Sidenav container -->
 <div [ngClass]="{'translate-x-full' : !isSideNavOpen, 'translate-0' : isSideNavOpen}"
 class="sidenav fixed right-0 bg-[#0B1307] min-h-screen w-full md:w-[30rem] flex flex-col justify-end z-20">
 
 <div class="flex flex-col justify-between h-full gap-8 pr-[3em] md:pr-[10em]">
   <div class="flex flex-row justify-end pt-10">
-    <a routerLink="#"><img src="./assets/images/sidenavLogo.png" /></a>
+    <a routerLink="" (click)="closeSidenav()"><img src="./assets/images/sidenavLogo.png" /></a>
   </div>
 
   <div class="flex-grow flex flex-col items-end text-secondary text-[18px] font-thin justify-center gap-3" (click)="onLinkClick($event)">
     <a *ngFor="let link of sidenavLinks" [routerLink]="link.path">{{ link.label }}</a>
+    <button (click)="openModal()">Reserve Now</button>
   </div>
+
 
   <div class="h-[7.5rem] border-r-[1px] border-bookLine"></div>
 
-  <div class="flex flex-row justify-end items-end gap-[3em] pb-10">
+   <div class="flex flex-row justify-end items-end gap-[3em] pb-10">
     <a href="" class="text-[14px] text-secondary font-thin">instagram</a>
     <a href="" class="text-[14px] text-secondary font-thin">facebook</a>
   </div>
 </div>
 
 </div>
+<app-modal [isVisible]="modalVisible" (closeModalEvent)="handleCloseModal()"></app-modal>

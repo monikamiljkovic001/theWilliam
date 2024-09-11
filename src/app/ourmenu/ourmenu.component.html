@@ -1,17 +1,17 @@
-<div class="flex flex-col md:flex-row justify-between items-center pt-40 gap-5">
+    <div class="flex flex-col md:flex-row justify-between items-center pt-40 gap-5">
 
     <div class="text-center md:w-[30vw] md:pl-[7em]">
         <p class="text-[1.1rem] text-secondary font-thin">The William</p>
-        <p class="text-[2rem] text-primary font-thin">Our Menu</p>
+        <p class="text-[1.8rem] md:text-[2rem] text-primary font-thin">Our Menu</p>
     </div>
 
     <div class="md:w-[70vw]">
         <img src="./assets/images/ourMenuHeader.png" class="w-full"/>
     </div>
 
-  </div>
+     </div>
 
-  <div class="flex flex-row w-full justify-center md:justify-between">
+    <div class="flex flex-row w-full justify-center md:justify-between">
 
           <!-- Vertical line -->
     <div class="flex flex-col relative">
@@ -20,9 +20,9 @@
 
             <!-- Right Section -->
 
-    <div class="w-[80vw] md:w-[70vw] py-20">
+    <div class="w-[80vw] md:w-[68vw] py-20">
 
-      <div class="md:w-[50vw] flex flex-col gap-5">
+         <div class="md:w-[50vw] flex flex-col gap-10">
             
             <!-- Choose food type -->
             <div class="flex flex-col gap-5">
@@ -42,21 +42,22 @@
              <router-outlet></router-outlet>
           
             <!-- images + book a table -->
-            <div class="flex flex-col md:flex-row gap-20 justify-between">
+            <div class="flex flex-col md:flex-row gap-10 md:gap-20 justify-between">
 
                 <div class="md:w-[20vw]">
                     <img src="./assets/images/ourMenuImg.png" alt="">
                 </div>
 
-                <div class="flex flex-row md:w-20vw items-center justify-between">
-                    <div class="border-t-[1px] border-bookLine w-[2vw]"></div>
-                    <a routerLink="reservation" class="text-[1.2rem] text-secondary md:w-[16vw] text-center">BOOK A TABLE</a>
-                    <div class="border-t-[1px] border-bookLine w-[2vw]"></div>
-                </div>
+                <div class="flex flex-row md:w-[20vw] items-center justify-between">
+                    <div class="border-t-[1px] border-bookLine w-[10vw] md:w-[2vw]"></div>
+                    <button (click)="openModal()" class="text-[1.2rem] text-secondary text-center border-0">BOOK</button>
+                    <div class="border-t-[1px] border-bookLine w-[10vw] md:w-[2vw]"></div>
+                  </div>
+
+                 
+
             </div>
-            
-      </div>
 
+         </div>
+         <app-modal [isVisible]="modalVisible" (closeModalEvent)="handleCloseModal()"></app-modal>                     
     </div>
-
-</div>

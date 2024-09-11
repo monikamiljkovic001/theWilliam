@@ -1,22 +1,25 @@
-<app-header></app-header>
-<div class="gradient_bg min-h-screen relative">
 
-    <div *ngIf="showLines" class="z-30 absolute border-[1px] top-0 left-[1em] border-firstLine h-full"></div>
-    <div *ngIf="showLines" class="z-30 absolute border-[1px] top-0 left-[3em] border-firstLine h-full"></div>
-    <div *ngIf="showLines" class="z-30 absolute border-[1px] top-0 left-[5em] border-firstLine h-full"></div>
-    <div *ngIf="showLines" class="z-30 absolute border-[1px] top-0 right-[5em] border-firstLine h-full"></div>
-
-    <router-outlet></router-outlet>
-
-    <div class="absolute border-b-[1px] border-firstLine w-full"></div>
-
-   <app-footer></app-footer>
-
-  </div>
-
-  <div class="hidden md:block md:fixed right-[0.8em] bottom-[3em] border-[1px] border-firstLine p-4">
-    <a href="#" (click)="scrollToTop($event)">
-      <img src="./assets/images/toTop.png" alt="Scroll To Top">
-    </a>
-  </div>
+<div class="content-wrapper">
+  <app-header></app-header>
+  <div class="gradient_bg min-h-screen relative">
   
+      <div *ngIf="showLines" class="z-30 absolute border-[1px] top-0 left-[1em] border-firstLine h-full"></div>
+      <div *ngIf="showLines" class="z-30 absolute border-[1px] top-0 left-[3em] border-firstLine h-full"></div>
+      <div *ngIf="showLines" class="z-30 absolute border-[1px] top-0 left-[5em] border-firstLine h-full"></div>
+      <div *ngIf="showLines" class="z-30 absolute border-[1px] top-0 right-[5em] border-firstLine h-full"></div>
+  
+      <router-outlet></router-outlet>
+  
+      <div class="absolute border-b-[1px] border-firstLine w-full"></div>
+  
+     <app-footer></app-footer>
+  
+    </div>
+  
+    <div class="hidden md:block md:fixed right-[0.8em] bottom-[3em] border-[1px] border-firstLine p-4">
+      <a href="#" (click)="scrollToTop($event)">
+        <img src="./assets/images/toTop.png" alt="Scroll To Top">
+      </a>
+    </div>
+    
+</div>

@@ -1,10 +1,4 @@
 
-input[type='email'] {
-    appearance: none !important;
-    outline: none;
- 
-}
-
 .scroll-to-top {
     position: fixed;
     bottom: 15px;

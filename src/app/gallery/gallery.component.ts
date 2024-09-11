@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent {
+
 selectedImages: string[] = [];
 
 breakfastImages = [
@@ -47,7 +48,6 @@ openModal(images: string[]){
 closeModal(){
   this.selectedImages = []
 }
-
 
 
 }

@@ -3,53 +3,55 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html, body { height: 100%; scroll-behavior: smooth;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;  
+    overflow: hidden;  
+    position: relative;
       }
 
+      .content-wrapper {
+        overflow: auto;
+        height: 100vh;
+      }
+    
+    .content-wrapper::-webkit-scrollbar {
+      width: 0.5px;
+  }
+  
+  .content-wrapper::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3); 
+      border-radius: 10px; 
+  } 
 
-.background_opacity{
-background-color:#0b1307f1;
-}
+  .background_opacity{
+    background-color:#0b1307f1;
+    }
 
 .gradient_bg {
     background: linear-gradient(to bottom, #0B1307, #030A01);
 }
 
-select{
-    appearance: none !important;
-}
-
 select,
 input[type="text"],
 input[type="number"],
-input[type="date"],
-input[type="time"],
 input[type='email'],
 textarea {
     appearance: none !important;
     outline: none;
     padding: 0.5rem;
-    color: #F4F4F4
+    color: #F4F4F4;
+
 }
 
-option{
-    background-color: #0b1307 !important;
-    appearance: none !important;
-    outline: none !important;
-    color: #F4F4F4
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="time"]::-webkit-calendar-picker-indicator {
-    opacity: 0; 
-    position: absolute; 
-    cursor: pointer; 
-}
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
+    cursor: pointer;
 }
 
 
@@ -58,17 +60,17 @@ input[type="number"]::-webkit-inner-spin-button {
     border: none; 
     font-weight: lighter;
     border-bottom: 1px solid #252B25; 
-    background-color: transparent; 
+    background-color: transparent !important; 
     outline: none; 
     appearance: none !important;
     padding-bottom: 2.5rem;
     color: #F4F4F4;
   }
   
-
+ 
   .custom-input:focus {
     border-bottom-color: #f7d9bc; 
-  
+
   }
   
   .custom-input::placeholder {
@@ -78,21 +80,20 @@ input[type="number"]::-webkit-inner-spin-button {
   .custom-input:-webkit-autofill,
   .custom-input:-webkit-autofill:focus,
   .custom-input:-webkit-autofill:hover {
-    border-bottom: 2px solid #f7d9bc; 
-    -webkit-box-shadow: 0 0 0 30px transparent inset !important; 
+    border-bottom: 1px solid #f7d9bc; 
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important; 
     -webkit-text-fill-color: inherit !important; 
+    -webkit-text-fill-color: #F4F4F4 !important;
     transition: background-color 5000s ease-in-out 0s; 
+    background-color: #0b1307 !important;
   }
   
 
-  .custom-input:autofill,
-  .custom-input:autofill:focus,
-  .custom-input:autofill:hover {
-    border-bottom: 2px solid #f7d9bc; 
-    box-shadow: 0 0 0 30px transparent inset !important; 
-    -moz-text-fill-color: inherit !important; 
-    transition: background-color 5000s ease-in-out 0s; 
-  }
-  
+.custom-input.ng-invalid.ng-touched {
+  border-bottom: 1px solid #3f0505; 
+}
 
-  
+google-map {
+  display: block;
+  border: none !important;
+}

@@ -2,11 +2,11 @@
 
     <div class="text-center md:w-[30vw] md:pl-[7em]">
         <p class="text-[1.1rem] text-secondary font-thin">The William</p>
-        <p class="text-[2rem] text-primary font-thin">Our Gallery</p>
+        <p class="text-[1.8rem] md:text-[2rem] text-primary font-thin">Our Gallery</p>
     </div>
 
     <div class="md:w-[70vw]">
-        <img src="./assets/images/ourGalleryHeader.png" class="w-full"/>
+        <img src="./assets/images/ourGalleryHeader.png" class="w-full h-auto"/>
     </div>
 
   </div>
@@ -14,56 +14,57 @@
   <div class="flex flex-row justify-center md:justify-between">
 
       <!-- Vertical line -->
-    <div class="flex flex-col relative">
+    <div class="relative">
         <div style="left: calc(30vw / 2 + 3.5em);" class="hidden md:block md:absolute border-l-[1px] border-firstLine h-full"></div>
     </div>
 
-    <div class="w-[70vw] mt-[5em]">
+    <div class="w-[80vw] md:w-[68vw] py-10">
 
-        <div class="flex flex-col w-[50vw] gap-[3em]">
+        <div class="flex flex-col md:w-[50vw] gap-10">
+
             <div class="flex flex-col">
                 <p class="text-justify text-primary leading-6 text-[1rem] font-thin">Take a visual tour of The William through our gallery. From the elegant dining room to the cozy outdoor patio, every corner of our restaurant is designed to provide a memorable dining experience. Our behind-the-scenes photos offer a glimpse into the artistry and precision that go into every dish we serve.</p>
             </div>
     
             <div>       
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col gap-[1.5em] pr-[3em] pb-[1.5em]" (click)="openModal(breakfastImages)">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="flex flex-col gap-[1.5em] md:pr-[3em] pb-[1.5em]" (click)="openModal(breakfastImages)">
                         <img src="./assets/images/breakfast.png" alt="Breakfast Gallery" class="cursor-pointer">
-                        <button class="text-justify text-primary leading-6 text-[1.2rem] font-light">Breakfast</button>
+                        <button class="text-justify text-primary leading-6 text-[1.1rem] md:text-[1.2rem] font-light">Breakfast</button>
                     </div>
         
                     <div class="border-r-[1px] border-bookLine"></div>
         
-                    <div class="flex flex-col gap-[1.5em] pl-[3em] pb-[1.5em]" (click)="openModal(lunchImages)">
+                    <div class="flex flex-col gap-[1.5em] md:pl-[3em] pb-[1.5em]" (click)="openModal(lunchImages)">
                         <img src="./assets/images/lunch.png" alt="Lunch Gallery" class="cursor-pointer">
-                        <button class="text-justify text-primary leading-6 text-[1.2rem] font-light">Lunch</button>
+                        <button class="text-justify text-primary leading-6 text-[1.1rem] md:text-[1.2rem] font-light">Lunch</button>
                     </div>
                 </div>
         
                 <div class="border-t-[1px] border-bookLine"></div>
         
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col gap-[1.5em] pr-[3em] pt-[1.5em]" (click)="openModal(dinnerImages)">
-                        <button class="text-justify text-end text-primary leading-6 text-[1.2rem] font-light">Dinner</button>
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="flex flex-col gap-[1.5em] md:pr-[3em] pt-[1.5em]" (click)="openModal(dinnerImages)">
+                        <button class="text-justify text-end text-primary leading-6 text-[1.1rem] md:text-[1.2rem] font-light">Dinner</button>
                         <img src="./assets/images/dinner.png" alt="Dinner Gallery" class="cursor-pointer">
                     </div>
         
                     <div class="border-r-[1px] border-bookLine"></div>
         
-                    <div class="flex flex-col gap-[1.5em] pl-[3em] pt-[1.5em]" (click)="openModal(sweetsImages)">
-                        <button class="text-justify text-primary text-end leading-6 text-[1.2rem] font-light">Sweets</button>
+                    <div class="flex flex-col gap-[1.5em] md:pl-[3em] pt-[1.5em]" (click)="openModal(sweetsImages)">
+                        <button class="text-justify text-primary text-end leading-6 text-[1.1rem] md:text-[1.2rem] font-light">Sweets</button>
                         <img src="./assets/images/sweets.png" alt="Sweets Gallery" class="cursor-pointer">
                     </div>
                 </div>
             </div>
 
-            <a routerLink="ourmenu" class="text-center text-secondary leading-6 text-[1.2rem] font-light">Menu</a>
-           
-            <p class="pb-[5em] text-justify text-primary leading-6 text-[1rem] font-light">Go to our <a class="text-secondary text-[1rem]" routerLink="MENU">MENU</a> and discover the delicious dishes that await you. From savory appetizers to delectable desserts, there's something for everyone to enjoy. Don't miss out on our chef's specials – your taste buds will thank you!</p>
-        </div>
+            <a routerLink="/ourmenu" class="hidden md:block text-center text-secondary leading-6 text-[1.2rem] font-light">Menu</a>           
+            <p class="text-justify text-primary leading-6 text-[1rem] font-light">Go to our <a class="text-secondary text-[1rem]" routerLink="/ourmenu">MENU</a> and discover the delicious dishes that await you. From savory appetizers to delectable desserts, there's something for everyone to enjoy. Don't miss out on our chef's specials – your taste buds will thank you!</p>
+    </div>
 
     </div>
 
   </div>
 
   <app-image-modal *ngIf="selectedImages.length" [imageList]="selectedImages" (closeModal)="closeModal()"></app-image-modal>
+  <router-outlet></router-outlet>

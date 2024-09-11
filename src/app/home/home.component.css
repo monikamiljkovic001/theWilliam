@@ -10,3 +10,27 @@
 .transition-transform{
     transition: transform 0.5 ease
 }
+
+.flatpickr-calendar {
+    background-color: transparent; /* Make calendar background transparent */
+    border: none;
+    box-shadow: none;
+  }
+  
+  .flatpickr-day.selected,
+  .flatpickr-day:hover {
+    background-color: #0b1307; 
+    color: #F4F4F4; 
+  }
+  
+  .flatpickr-input {
+    background-color: transparent; 
+    color: #F4F4F4; 
+    border: none;
+    outline: none;
+  }
+  
+  .flatpickr-input:focus {
+    border-bottom: 1px solid #f7d9bc; 
+  }
+  
