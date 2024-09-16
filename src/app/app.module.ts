@@ -53,9 +53,6 @@ import { SpecialOnMenuModalComponent } from './modals/special-on-menu-modal/spec
     ReactiveFormsModule,
     MapComponent,
     FormsModule
-  
-
-
 ],
 
   providers: [],

@@ -60,6 +60,7 @@ export class HeaderComponent {
 
   isPopupOpen: boolean = false;
 
+  
   onLinkClick(event: Event) {  
     this.closeSidenav();
   }
